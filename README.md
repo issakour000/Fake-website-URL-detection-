@@ -33,14 +33,14 @@ Concurrency	SwingWorker background threads
                   +--------v---------+
                   |  DashboardFrame  |
                   +--------+---------+
-   +-----------+-----------+-----------+-----------+
-   |           |           |           |           |
- Scanner     Batch      History     ML Trainer  Simulation
-   |           |           |           |
-   +-----+-----+           |           |
-         |                 |           |
- FeatureExtractor      DataBaseConnection     MLModel
-   (rules)              |           |       (Logistic Regression)
+    +-----------+-----------+-----------+-----------+
+    |           |           |           |           |
+    Scanner     Batch      History     ML Trainer  Simulation
+    |           |           |           |
+    +-----+-----+           |           |
+          |                 |           |
+    FeatureExtractor      DataBaseConnection     MLModel
+    (rules)              |           |       (Logistic Regression)
                     users.txt  scan_history.tsv
 
 
