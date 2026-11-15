@@ -61,7 +61,7 @@ BentoCard.java	Custom rounded-corner panel with consistent padding.
 
 The program asks a series of questions about the URL. Every "yes" adds risk points, and the more points a URL collects, the more dangerous it looks.
 
-* Feature	Points	Why it matters
+Feature	Points	Why it matters
 * Long URL (over 75 characters)	10	Long URLs often hide malicious domains
 * IP address as host	25	Legitimate sites use DNS names; raw IPs bypass filters
 * @ symbol in URL	15	Browsers ignore text before @, so attackers can fake a trusted domain
