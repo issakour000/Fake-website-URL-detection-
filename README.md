@@ -61,17 +61,17 @@ BentoCard.java	Custom rounded-corner panel with consistent padding.
 
 The program asks a series of questions about the URL. Every "yes" adds risk points, and the more points a URL collects, the more dangerous it looks.
 
-Feature	Points	Why it matters
-Long URL (over 75 characters)	10	Long URLs often hide malicious domains
-IP address as host	25	Legitimate sites use DNS names; raw IPs bypass filters
-@ symbol in URL	15	Browsers ignore text before @, so attackers can fake a trusted domain
-No HTTPS	10	Missing SSL suggests an untrusted or throwaway site
-Many subdomains (3 or more)	10	e.g. login.paypal.com.secureupdate.tk
-Suspicious keywords	up to 15	Words like login, secure, verify, billing, kyc, password
-Risky TLD	12	Cheap or free domains such as .tk, .ml, .xyz, .zip
-Punycode (xn--)	15	Look-alike foreign characters used in homograph attacks
-Brand impersonation	20	Domain mentions "google" or "paypal" but belongs to another root domain
-Trusted domain	-100	Known safe sites (e.g. github.com) get a big reduction so they are not wrongly flagged.
+* Feature	Points	Why it matters
+* Long URL (over 75 characters)	10	Long URLs often hide malicious domains
+* IP address as host	25	Legitimate sites use DNS names; raw IPs bypass filters
+* @ symbol in URL	15	Browsers ignore text before @, so attackers can fake a trusted domain
+* No HTTPS	10	Missing SSL suggests an untrusted or throwaway site
+* Many subdomains (3 or more)	10	e.g. login.paypal.com.secureupdate.tk
+* Suspicious keywords	up to 15	Words like login, secure, verify, billing, kyc, password
+* Risky TLD	12	Cheap or free domains such as .tk, .ml, .xyz, .zip
+* Punycode (xn--)	15	Look-alike foreign characters used in homograph attacks
+* Brand impersonation	20	Domain mentions "google" or "paypal" but belongs to another root domain
+* Trusted domain	-100	Known safe sites (e.g. github.com) get a big reduction so they are not wrongly flagged.
 
 # Method 2: Machine Learning Model
 Instead of fixed rules, the model learns from examples. You give it a dataset (e.g. phishing_site_urls.csv) of thousands of URLs, each labeled phishing (1) or legitimate (0). For each URL, the program converts the link into 24 numbers (length, dot count, keyword hits, and so on) and learns which numbers tend to go with phishing.
